@@ -1,0 +1,49 @@
+import random
+
+
+print("JOKENPÔ")
+print ("Digite: PEDRA, PAPEL OU TESOURA")
+
+
+lista = ['pedra', 'papel', 'tesoura']
+elemento = random.choice(lista)
+escolha = str(input("escolha: "))
+
+#comando lower fará ignorar se a variavel é minuscula ou maiscula
+#random é uma biblioteca utilizada para aleatorizar valores
+#criei uma lista com os valores de um jokenpo, e a variavel elemento
+#ira receber um dos tres valores aleatorios
+
+if escolha.lower()==elemento:
+    print ("computador = ", elemento, "\nusuario = ", escolha.lower())
+    print("deu velha")
+    print ("fim da partida")
+elif elemento=='pedra' and escolha.lower()=='papel':
+    print ("computador = ", elemento, "\nusuario = ", escolha.lower())
+    print("usuario ganhou")
+    print ("fim da partida")
+elif elemento=='papel' and escolha.lower() =='pedra':
+    print ("computador = ", elemento, "\nusuario = ", escolha.lower())
+    print("computador ganhou")
+elif elemento=='tesoura' and escolha.lower() =='pedra':
+    print ("computador = ", elemento, "\nusuario = ", escolha.lower())
+    print("usuario ganhou")
+    print ("fim da partida")
+elif elemento=='pedra' and escolha.lower() =='tesoura':
+    print ("computador = ", elemento, "\nusuario = ", escolha.lower())
+    print("computador ganhou")
+    print ("fim da partida")
+elif elemento=='papel' and escolha.lower() =='tesoura':
+    print ("computador = ", elemento, "\nusuario = ", escolha.lower())
+    print("usuario ganhou")
+    print ("fim da partida")
+elif elemento=='tesoura' and escolha.lower() =='papel':
+    print ("computador = ", elemento, "\nusuario = ", escolha.lower())
+    print("computador ganhou")
+    print ("fim da partida")
+elif escolha.lower() == 'sair':
+    print("fim de jogo")
+else:
+    print ("valor não reconhecido")
+    
+    
